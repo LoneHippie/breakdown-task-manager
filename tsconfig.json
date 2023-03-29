@@ -1,6 +1,17 @@
 {
-  "extends": "expo/tsconfig.base",
-  "compilerOptions": {
-    "strict": true
-  }
+   "extends": "expo/tsconfig.base",
+   "compilerOptions": {
+      "strict": true,
+      "module": "esnext",
+      "baseUrl": ".",
+      "paths": {
+         "~app_tools/*": ["./src/tools/*"],
+         "~app_contexts/*": ["./src/contexts/*"],
+         "~app_interfaces/*": ["./src/interfaces/*"],
+         "~app_screens/*": ["./src/screens/*"]
+      }
+   },
+   "include": ["./src/**/*", "./App.tsx", "./src/**/*", "src/**/*", "src/**/*.*"],
+   "exclude": ["node_modules", "babel.config.js"],
+   "typeRoots": ["./src/types"]
 }
